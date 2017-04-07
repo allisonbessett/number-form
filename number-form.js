@@ -1,6 +1,8 @@
 // keywords to use 
 // input() submit() reset() preventDefault;
 
+var numberForm = document.forms["numberForm"];
+var el, e;
 function target(e) {
   if (!e) {
     e = window.event;
@@ -8,17 +10,19 @@ function target(e) {
   return e.target || e.srcElement;
 }
 
-var e = event;
+
 function submitNumber(e) {
 var elSubmit = document.getElementById('submit');
+var counter = document.getElementbyId('number').value;
+ 
 }
-var el = document.getElementbyId('number');
-el.addEventListener('input', submitNumber, false);
-if (e.preventDefault) {
-  e.preventDefault();
-} else {
-  e.returnValue = false;
-}
+
+//el.addEventListener('input', submitNumber, false);
+//if (e.preventDefault) {
+//  e.preventDefault();
+//} else {
+//  e.returnValue = false;
+//}
 
 var msg = '<div id="count"><h4>Count: <h4></div>';
 msg += '<div id="sum"><h4>Sum: <h4></div>';
